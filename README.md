@@ -36,13 +36,16 @@ A comprehensive Java-based trading system implementing a full order book with re
 ## Usage Example
 
 // Initialize products and users
+
 ProductManager.getInstance().addProduct("WMT");
 UserManager.getInstance().init(new String[]{"ANA", "BOB", "COD"});
 
 // Subscribe to market data
+
 CurrentMarketPublisher.getInstance().subscribeCurrentMarket("WMT", user);
 
 // Add quotes and orders
+
 ProductManager.getInstance().addQuote(
     new Quote("WMT", PriceFactory.makePrice(15990), 75,
               PriceFactory.makePrice(16000), 75, "ANA"));
